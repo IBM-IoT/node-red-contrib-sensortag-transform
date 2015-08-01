@@ -1,0 +1,27 @@
+<script type="text/javascript">
+	RED.nodes.registerType('sensortag-transform', {
+		category: 'GatewayKit',
+		color: '#c97a7a',
+		defaults: {
+			name: {value:""},
+		},
+		inputs: 1,
+		outputs: 1,
+		icon: "timeseries.png",
+		align: "right",
+		label: function() {
+			return this.name||"Sensortag Transform";
+		}
+	});
+</script>
+
+<script type="text/x-red" data-template-name="sensortag-transform">
+	<div>
+		<label for="node-input-name">Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+</script>
+
+<script type="text/x-red" data-help-name="sensortag-transform">
+	<p>This node takes data from the sensortag node and transforms it to be inserted into the timeseries database.</p>
+</script>
