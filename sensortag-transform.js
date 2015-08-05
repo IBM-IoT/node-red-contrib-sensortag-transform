@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-	RED.nodes.registerType("sensortag-transform", transform);
+	RED.nodes.registerType("sensortag-xform", transform);
 	
 	function transform(n) {
 		RED.nodes.createNode(this,n);
@@ -59,6 +59,10 @@ module.exports = function(RED) {
 			data.json_data.gyro_x = msg.payload.x;
 			data.json_data.gyro_y = msg.payload.y;
 			data.json_data.gyro_z = msg.payload.z;
+			sensorId = 6;
+		}
+		else if( topic = "luxometer" ) {
+			data.json_data.lux = msg.payload.lux
 			sensorId = 6;
 		}
 		else {

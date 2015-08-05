@@ -1,5 +1,5 @@
 <script type="text/javascript">
-	RED.nodes.registerType('sensortag-transform', {
+	RED.nodes.registerType('sensortag-xform', {
 		category: 'GatewayKit',
 		color: '#c97a7a',
 		defaults: {
@@ -15,13 +15,13 @@
 	});
 </script>
 
-<script type="text/x-red" data-template-name="sensortag-transform">
+<script type="text/x-red" data-template-name="sensortag-xform">
 	<div>
 		<label for="node-input-name">Name</label>
 		<input type="text" id="node-input-name" placeholder="Name">
 	</div>
 </script>
 
-<script type="text/x-red" data-help-name="sensortag-transform">
+<script type="text/x-red" data-help-name="sensortag-xform">
 	<p>This node takes data from the sensortag node and transforms it to be inserted into the timeseries database.</p>
 </script>
